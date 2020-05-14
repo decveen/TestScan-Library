@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         Button scanButton = findViewById(R.id.scan_button);
-        scanButton.setText("start scan");
         scanButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -49,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void startScanning() {
+    public void startScanning() {
         initSDK();
 
         ScanConfiguration scanConfiguration = new ScanConfiguration();
@@ -79,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         GeniusScanSdkUI.scanWithConfiguration(MainActivity.this, scanConfiguration);
     }
 
-    private void initSDK() {
+    public void initSDK() {
         ////////////////////////////////////////////////////////////////////////////////////////////////////
         // This code shows how to initialize the SDK with a license key.
         // Without a license key, the SDK runs for 60 seconds and then the app needs to be restarted.
