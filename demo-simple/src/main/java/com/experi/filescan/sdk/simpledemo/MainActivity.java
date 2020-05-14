@@ -29,7 +29,8 @@ import java.util.EnumSet;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String TAG = MainActivity.class.getSimpleName();
+    public static final String TAG = MainActivity.class.getSimpleName();
+    public String value = "10";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
